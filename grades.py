@@ -14,8 +14,8 @@ elif grade < 80:
 elif grade < 90:
     score = 'B'
 else: score = 'A'
-
+#printing the resulting information
 if grade < 90:
     print(f"{name} got a {score}")
 else: print(f"{name} got an {score}")
-#Grammar is important
+#grammar is important obviously
