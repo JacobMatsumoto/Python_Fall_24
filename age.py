@@ -9,9 +9,12 @@ Print all the results on the screen."""
 #asking user for information
 age = int(input("What is your age?  "))
 #using said information to calculate if they are old enough for certain things
+if age < 16:
+    print ("You are not old enough to drive")
+else: print("You are old enough to drive")
 if age < 18:
-    print("You aren't old enough to drive or vote")
-else:print("You are old enough to drive and vote")
+    print("You aren't old enough to vote")
+else:print("You are old enough to vote")
 if age < 21:
     print("You aren't old enough to buy alchohol")
 else:print("You are old enough to buy alchohol")
