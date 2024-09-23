@@ -14,30 +14,5 @@ Remember to test your program to ensure it runs correctly."""
 
 days=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
 steps=[]
-for i in range (days):
-    print(f"How many steps did you walk on {i}")
-# mon=int(input("How man steps did you take on Monday? "))
-# steps.append(mon)
-# tues=int(input("How man steps did you take on Tuesday? "))
-# steps.append(tues)
-# wed=int(input("How man steps did you take on Wednesday? "))
-# steps.append(wed)
-# thurs=int(input("How man steps did you take on Thursday? "))
-# steps.append(thurs)
-# fri=int(input("How man steps did you take on Friday? "))
-# steps.append(fri)
-# sat=int(input("How man steps did you take on Saturday? "))
-# steps.append(sat)
-# sun=int(input("How man steps did you take on Sunday? " ))
-# steps.append(sun)
-#^ Original code i wrote before rereading assignment wanting use of a loop
-total=(mon+tues+wed+thurs+fri+sat+sun)
-# average=round(total_steps/7) what i originally wrote before rereading instructions
-for i in range(len(days)):
-    day= days[i]
-    step=steps[i]
-    print(f"You walked {step} on {day}")
 
 
-average = round(total / len(steps))
-print(f"You waled a total of {total} steps with an average of {average} of steps per day")
