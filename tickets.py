@@ -24,24 +24,27 @@ Your program should handle inputs gracefully.
  display a friendly message and prompt them to choose again."""
 #TODO ^
 
-tickets = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-purchase = "Available"
-while purchase != "Sold":
+tickets = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20] #Innitialise our list of availiable tickets
+purchase = 5
+while purchase != 0:
+#setting a lot of ifs for different kinds of input from our users
     for ticket in tickets:
         print(f"\nPlease select an available ticket from the selection of availiable seats {tickets}")
 
-        purchase = int(input("\nPlease enter the number of the ticket you wish to purchase "))
-        if purchase not in tickets:
+        purchase = int(input("\nPlease enter the number of the ticket you wish to purchase. Or enter '0' to finish your purchase "))
+        if purchase == 0: #Giving the customer an out after purchasing
+             print("\nThank you for your patronage! Have a wonderful day!")
+             break
+        else:
+            if purchase not in tickets:
              print("We're sorry! That is not an availiable seat, please select an availiable ticket")
         if purchase in tickets:
-            confirm = int(input(f"if you would like to purchase seat {purchase} please enter a 0 "))
+            confirm = int(input(f"if you would like to purchase seat {purchase} please enter a '0' "))
             if confirm == 0:
                 print("\nThank you for your purchase!")
                 tickets.remove(purchase)
             if confirm != 0:
                  print("\nSorry that you changed your mind!")
         if len(tickets) == 0:
-                purchase = "Sold"
-                if purchase == "Sold":
-                     print("\nSorry the event is sold out!")
-
+                purchase = 0
+                print("\nSorry the event is sold out!")
