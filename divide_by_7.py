@@ -4,4 +4,4 @@ If a number is divisible by 7, print that number.
 Ensure your program outputs each qualifying number on a separate line."""
 for i in range (1, 300):
     if i % 7 == 0:
-        print(i)
+         print(i)

@@ -14,6 +14,18 @@ Remember to test your program to ensure it runs correctly."""
 
 days=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
 steps=[]
+total = 0
+for day in days:
+    my_steps = int(input(f"How many steps did you take on {day} "))
+    steps.append(my_steps)
+    total += my_steps
 
+average = total/7
+
+for i in range(len(days)):
+    day= days[i]
+    step=steps[i]
+    print(f"You walked {step} on {day}")
+print(f"You walked a total of {total} steps with an average of {average:.0f} per day!")
 
 
