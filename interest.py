@@ -14,17 +14,18 @@ floating-point number with two decimal places, and includes commas as thousand s
 The {calculated_interest:,.2f} does the same for the calculated interest.
 Test your function with different values to ensure it works correctly."""
 
-def calculate_interest(principle, rate, time):
+def calculate_interest(principle, rate, time): #calculate_interest calculates simple interest
     interest = (principle*rate*time) / 100
     return interest
 
 inp_principle = int(input("Please enter the principle amount "))
-inp_rate = int(input("Please enter the interest rate as a whole number "))
+inp_rate = int(input("Please enter the interest rate as a whole number ")) #getting input from users
 inp_time = int(input("Please enter the investment time in whole years "))
 # principle = inp_principle
 # rate = inp_rate
-# time = inp_time ----> this is how i coded it originally
+# time = inp_time ----> this is how i coded it originally, it worked but i wanted to condense it
 # calculated_interest = calculate_interest(principle, rate, time)
-calculated_interest = calculate_interest(principle = inp_principle, rate = inp_rate, time = inp_time)
-print(f"With a innitial principle amount of ${inp_principle:,.2f} at a yearly rate of {inp_rate}% for {inp_time} years \nwill give you an interest of ${calculated_interest:,.2f}")
+calculated_interest = calculate_interest(principle = inp_principle, rate = inp_rate, time = inp_time) #using the function to get the interest reult
+#I went with the calculation above since its one line and sorta easier than converting them the other way^ 
+print(f"With a principle amount of ${inp_principle:,.2f} at a yearly rate of {inp_rate}% for {inp_time} years \nwill give you an interest of ${calculated_interest:,.2f}")
 
