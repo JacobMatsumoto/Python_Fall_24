@@ -32,16 +32,22 @@ def weight_convr(lb):
     weight = lb * KG_CONVR
     return weight
 
-def height_convr(inches):
+def height_convr(inches):#converts in-m
     height = inches * METER_CONVR
     return height
 
-def main():
-
-
+def main(): #asks for input, calcs bmi, then displas the appropriate message for weight category
     inches = int(input("Please enter your height in inches as a whole number  "))
     lb = int(input("Please enter your weight in pounds as a whole number  "))
-
-    print(f"Your weight in kg is {weight_convr(lb):.2f}")
+    bmi = weight_convr(lb)/(height_convr(inches)*height_convr(inches))
+    print(f"Your bmi is {bmi:.2f}")
+    if bmi < 18.5:
+        print("You're in the underweight category")
+    elif 18.5<=bmi<24.9:
+        print("You're in the normal weight category")
+    elif 25 <= bmi < 29.9:
+        print("You're in the overweight category")
+    else:
+        print("You're in the obese category")
 
 main()
