@@ -8,12 +8,12 @@ Create a main function. Inside this function, prompt the user to enter a
 non-negative integer. Use the int() function to convert the input to an integer.
 Call the factorial function from your main function with the user's input as its 
 argument, and print the result in a format like "The factorial of n is result."."""
-def factorial(n):
+def factorial(n): # this function does the factorial calc, returning a 1 for 0 or 1
     if n == 1 or n == 0:
         return 1
     else:
         return n * factorial(n - 1)
-def main():
+def main(): # asks for input from the user, then calls factorial, which calls itself until it does the factorial, displays results
     n = int(input("Please enter a whole, positive number "))
     inp_n = factorial(n)
     print(f"{n}! is {inp_n:,.2f}")
