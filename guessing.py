@@ -31,9 +31,9 @@ def main(): #main will do everything for the program, prompting the user for a n
           print("Cool")
         elif abs(user_guess - num) >= 25:
            print("Cold")
-        if user_guess >= 101 or user_guess <= 0:
+        if user_guess >= 101 or user_guess <= 0: # for bad data.
          print("Please enter a number between 1 and 100 no more no less")
-   except ValueError:
+   except ValueError: #for ugly data
     print("Please enter a valid number between 1-100 in numerics")
     main()
 
