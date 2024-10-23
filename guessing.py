@@ -13,8 +13,8 @@ The loop should continue until the user guesses the correct number.
 Make sure to call the main function!"""
 
 
-import random
-def main():
+import random #importing random
+def main(): #main will do everything for the program, prompting the user for a number and comparing it to the randomly generated number
    try:
       num = random.randrange(0, 101)
       user_guess = 0
@@ -31,8 +31,8 @@ def main():
           print("Cool")
         elif abs(user_guess - num) >= 25:
            print("Cold")
-        elif user_guess == num:
-          print(f"Thats correct the number was {num}")
+        if user_guess >= 101 or user_guess <= 0:
+         print("Please enter a number between 1 and 100 no more no less")
    except ValueError:
     print("Please enter a valid number between 1-100 in numerics")
     main()
