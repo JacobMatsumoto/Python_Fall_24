@@ -11,15 +11,17 @@ def spell_word():
 -prior....... i was so close just forgot the (letter) somehow"""
 
 
-word = []
+nato_alphabet = {"A": "Alpha", "B": "Bravo", "C": "Charlie", "D": "Delta", "E": "Echo", "F": "Foxtrot", "G": "Golf", "H": "Hotel", "I": "India", "J": "Juliett", "K": "Kilo", "L": "Lima", "M": "Mike", "N": "November", "O": "Oscar", "P": "Papa", "Q": "Quebec", "R": "Romeo", "S": "Sierra", "T": "Tango", "U": "Uniform", "V": "Victor", "W": "Whiskey", "X": "X-ray", "Y": "Yankee", "Z": "Zulu"}
 def spell_word():#prompts user for a word, converts it to uppercase then appends each individual letter to the list "word"
+    word = []
     user_word = (input("Please enter a word "))
     user_word = user_word.upper()
     for letter in user_word:
         word.append(letter)
+    return word
+
 def main():#takes the users word and converts it into the nato equivilant.
-    spell_word()
-    nato_alphabet = {"A": "Alpha", "B": "Bravo", "C": "Charlie", "D": "Delta", "E": "Echo", "F": "Foxtrot", "G": "Golf", "H": "Hotel", "I": "India", "J": "Juliett", "K": "Kilo", "L": "Lima", "M": "Mike", "N": "November", "O": "Oscar", "P": "Papa", "Q": "Quebec", "R": "Romeo", "S": "Sierra", "T": "Tango", "U": "Uniform", "V": "Victor", "W": "Whiskey", "X": "X-ray", "Y": "Yankee", "Z": "Zulu"}
+    word = spell_word()
     for value in word:
-        print(nato_alphabet[value])
+        print(nato_alphabet[value]) #referencing global list
 main()
