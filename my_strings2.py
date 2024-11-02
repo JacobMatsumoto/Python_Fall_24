@@ -9,16 +9,21 @@ def main():
         print(letter)
 # TODO: Find and print the character with the minimum ASCII value in the string
     print("\nCharacter with the minimum ASCII value:")
+    """I did it wrong and made it harder than it needed to be at first.
+    I didnt want to delete it in case i wanted to use it later
     ascii_num1 = []  # innitialized the list
-    for letter in example_string:  # iterate through the list
+    for letter in example_string:  # iterate through the string
         ascii_value = ord(letter)  # obtain values
         ascii_num1.append(ascii_value)  # add them to the list
     ascii_num1.sort()  # order them
-    print(ascii_num1[0])
+    print(ascii_num1[0])"""
+    min_ascii = min(example_string)
+    print(f"'{min_ascii}'")  # it displays a ' '
 
 
 # TODO: Find and print the character with the maximum ASCII value in the string
     print("\nCharacter with the maximum ASCII value:")
+    """I did it wrong and made it harder than it needed to be at first.
     ascii_num2 = []
     for letter in example_string:
         ascii_value = ord(letter)
@@ -26,7 +31,9 @@ def main():
         ascii_num2.append(ascii_value)
     ascii_num2.sort()
     ascii_num2.reverse()  # only change
-    print(ascii_num2[0])
+    print(ascii_num2[0])"""
+    max_ascii = max(example_string)
+    print(f"'{max_ascii}'")
 # TODO: Find and print the index of the first occurrence of 'o' in the string
     print("\nIndex of 'o':")
     o_index = example_string.find('o')
