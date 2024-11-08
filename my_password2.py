@@ -8,7 +8,7 @@ def main():
         valid_num = False
         user_pass = input(
             "Please enter a strong password, it should be 8-20 characters, include one upper and lower case letter,\none number and a special character ex.(!@#$%&*) ")
-        if 8 <= len(user_pass) <= 20:
+        if 8 <= len(user_pass) <= 20:  # for some reason the above code moves any time I run or save
             valid_length = True
         else:
             print("Please enter a password with a length of 8-20")
@@ -44,7 +44,7 @@ def main():
         if valid_length and valid_cap and valid_lower and valid_special and valid_num == True:
             confirmed_password = input(
                 "Please re-enter your password to confirm ")
-            if confirmed_password == user_pass:
+            if confirmed_password == user_pass:  # for some reason the above code moves any time I run or save
                 print("Password confirmed")
                 valid = False  # This wont break the loop for some reason, and I dont feel a break is appropriate
             else:
