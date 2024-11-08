@@ -15,28 +15,22 @@ def main():
             continue
         for character in user_pass:
             if character.isupper() == True:
-                valid_cap = True  # checks upper, functioning
+                valid_cap = True
+            if character.islower() == True:
+                valid_lower = True
+            if character in ('1', '2', '3', '4', '5', '6', '7', '8', '9', '0'):
+                valid_num = True
+            if character in ('!', '@''#', '$', '%', '&', '*'):
+                valid_special = True  # checks upper, functioning
         if valid_cap == False:
             print("Please use an upper case letter")
             continue
-
-        for character in user_pass:
-            if character.islower() == True:
-                valid_lower = True
         if valid_lower == False:  # checks lower, functioning
             print("please use a lower case letter")
             continue
-
-        for character in user_pass:
-            if character in ('1', '2', '3', '4', '5', '6', '7', '8', '9', '0'):
-                valid_num = True
         if valid_num == False:  # checks num, functioning
             print("Please use a number")
             continue
-
-        for character in user_pass:
-            if character in ('!', '@''#', '$', '%', '&', '*'):
-                valid_special = True
         if valid_special == False:  # checks special character, functioning
             print("Please use a special character ex.(!@#$%&*)")
             continue
@@ -46,7 +40,7 @@ def main():
                 "Please re-enter your password to confirm ")
             if confirmed_password == user_pass:  # for some reason the above code moves any time I run or save
                 print("Password confirmed")
-                valid = False  # This wont break the loop for some reason, and I dont feel a break is appropriate
+                valid = False
             else:
                 print("Sorry re-enter your password")  # reseting works
                 continue
