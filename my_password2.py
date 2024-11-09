@@ -21,7 +21,7 @@ def main():
             if character in ('1', '2', '3', '4', '5', '6', '7', '8', '9', '0'):
                 valid_num = True
             if character in ('!', '@''#', '$', '%', '&', '*'):
-                valid_special = True  # checks upper, functioning
+                valid_special = True
         if valid_cap == False:
             print("Please use an upper case letter")
             continue
