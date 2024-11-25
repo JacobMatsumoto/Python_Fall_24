@@ -28,7 +28,7 @@ class Employee:
     def set_name(self, value):
         self.name = value
 
-    def set_employee_(self, value):
+    def set_employee_number(self, value):
         self.employee_number = value
 
     def __str__(self):
@@ -75,6 +75,7 @@ def main():
             setting_name = False
         except:
             print("Please enter a valid name for the employee")
+
     while setting_num:
         try:
             employee_num = int(
@@ -84,7 +85,7 @@ def main():
                 continue
 
             else:
-                new_production_employee.set_shift_num(employee_num)
+                new_production_employee.set_employee_number(employee_num)
                 print("Number accepted")
                 setting_num = False
 
@@ -114,7 +115,7 @@ def main():
             setting_pay = False
 
         except ValueError:
-            print("Please enter their hourl rate example, 23.25")
+            print("Please enter their hourly rate example, 23.25")
 
     print(new_production_employee)
 

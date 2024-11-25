@@ -1,7 +1,7 @@
-"""_summary_
-    Covers iterators, generators, and lambdas - tools that can make programming 
-    more efficient.
-    """
+# """_summary_
+#     Covers iterators, generators, and lambdas - tools that can make programming
+#     more efficient.
+#     """
 
 
 # class PrimeIterator:
@@ -34,32 +34,11 @@
 #     print(prime)
 
 
-# def multiples_of_five(n):
-#     for i in range(n):
-#         yield i * 5
+def multiples_of_five(n):
+    for i in range(n):
+        yield i * 5
 
 
-# # Example usage
-# result = list(multiples_of_five(10))
-# print(result)
-
-# print([x*2 for x in range(10)])
-
-# lambda
-# def double(x): return x * 2
-
-
-# def sorted_list(my_list): return sorted(my_list)
-
-
-# print(double(10))
-
-
-def outer_func(x):
-    def inner_func(y):
-        return x + y
-    return inner_func
-
-
-closure = outer_func(10)
-print(closure(5))  # Output: 1
+# Example usage
+result = list(multiples_of_five(10))
+print(result)
