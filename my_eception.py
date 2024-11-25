@@ -35,19 +35,19 @@ class NotNumericError:
     #     print(f"Multipling {user_num}.")
 
 
-def main():
+def main():  # prompts user for a number and then handles errors if they occur
     try:
         user_in = input("Please enter a number ")
         if not user_in.isnumeric():
-            raise NotNumericError(user_in)
+            raise NotNumericError(user_in)  # raises custom error
         user_num = int(user_in)
         print(f"Multipling {user_num}.")
 
     except NotNumericError as e:
         print(f"Error: {e}")
 
-    except Exception as e:
-        print(e)
+    except Exception as e:  # catches the unknown
+        print(f"An error has occured{e}")
 
     else:
         print(f"{user_num} times 10 would be {user_num * 10} ")
