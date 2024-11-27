@@ -10,10 +10,12 @@ def main():
         "Overall what was your emotion for today? (ex: happy, sad etc) ")
 
     # opens file
-    with open('diary.txt', 'a') as file:
+    with open('diary/diary.txt', 'a') as file:
 
         file.write(date + '\n' + event + '\n'
-                   + memory + '\n' + happiness + '\n')  # writes to the file
+                   # writes to the file
+                   + memory + '\n' + happiness + '\n--------------------------------------------------------------\n')
+        file.close()
 
 
 main()
