@@ -27,10 +27,12 @@ def main():
 
         print(f'You are {delta_years} years old')
 
+        # this calculates the days and converts it into months
         delta_months = delta.days // 30.41
-        delta_weeks = delta.days // 7
+        delta_weeks = delta.days // 7  # this does the same but for weeks
 
         print(f"You are {delta_months} months old")
+        # these two print the results
         print(f"You are {delta_weeks} weeks old")
 
     except Exception as e:
